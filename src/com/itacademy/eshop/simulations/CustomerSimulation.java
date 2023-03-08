@@ -1,7 +1,13 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Review;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class represents a simulation of a customer shopping on an Eshop.
@@ -29,21 +35,46 @@ public class CustomerSimulation {
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
-        throw new UnsupportedOperationException("addProductsToShoppingCart() is not implemented yet");
+
+        Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
+        shoppingCart.addProduct(laptop);
+
+        Product fridge = new Product("Fridge", 1000, Category.ELECTRONICS);
+        shoppingCart.addProduct(fridge);
+
+        Product book = new Product("Book", 20, Category.BOOKS);
+        shoppingCart.addProduct(book);
+
+        Product shirt = new Product("Shirt", 25, Category.CLOTHING);
+        shoppingCart.addProduct(shirt);
+
     }
 
     private void removeProductsFromShoppingCart() {
         /**
          * User removes shirt from the shopping cart.
          */
-        throw new UnsupportedOperationException("removeProductsFromShoppingCart() is not implemented yet");
+
+        shoppingCart.removeProductByName("Shirt");
+
     }
 
-private void leaveReviewsAndRatingsForProducts() {
+    private void leaveReviewsAndRatingsForProducts() {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
-        throw new UnsupportedOperationException("leaveReviewsAndRatingsForProducts() is not implemented yet");
+
+        List<Product> productList = shoppingCart.getProducts();
+
+        Review review1 = new Review("Evaldas", 5, "Amazing");
+        Review review2 = new Review("Valdas", 2, "Bad");
+        Review review3 = new Review("Valda", 5, "Amazing");
+
+        productList.get(0).addReview(review1);
+        productList.get(1).addReview(review2);
+        productList.get(2).addReview(review3);
+
+
     }
 
 

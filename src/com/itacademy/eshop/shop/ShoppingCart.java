@@ -7,6 +7,11 @@ import java.util.ArrayList;
 public class ShoppingCart {
     ArrayList<Product> products;
 
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
+
     public ShoppingCart() {
         this.products = new ArrayList<>();
     }
@@ -18,6 +23,14 @@ public class ShoppingCart {
             System.out.println("Category: " + product.getCategory());
         }
         System.out.println("Total price: " + getTotalPrice());
+    }
+
+    public void addProduct(Product shirt) {
+        products.add(shirt);
+    }
+
+    public void removeProduct(Product shirt){
+        products.remove(shirt);
     }
 
     public String getTotalPrice() {

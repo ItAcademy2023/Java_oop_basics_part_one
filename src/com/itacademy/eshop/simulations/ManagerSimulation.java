@@ -2,6 +2,7 @@ package com.itacademy.eshop.simulations;
 
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.LocatedAt;
 import com.itacademy.eshop.shop.Eshop;
 
 /**
@@ -27,26 +28,33 @@ public class ManagerSimulation {
         /**
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          */
-        Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
+        shop.addProduct(new Product("Laptop", 1000, Category.ELECTRONICS, LocatedAt.DENMARK));
+        shop.addProduct(new Product("Book", 50, Category.BOOKS, LocatedAt.SWEDEN));
+        shop.addProduct( new Product("Shirt", 30, Category.CLOTHING, LocatedAt.LITHUANIA));
     }
 
     private void findAndRemoveOneProduct() {
         /**
          * manager searcher for a product with the name "Laptop" (the one added a moment before) and removes it from the shop
          */
+        shop.removeProductByName("Laptop");
     }
 
     private void changePriceForOneProduct() {
         /**
          * manager searches for a product with the name "Shirt" (the one added a moment before) and changes its price to 20
          */
+        shop.changePriceForProduct("Shirt", 20);
     }
 
     private void removeAllProductsWithCategory(Category category) {
         /**
          * manager removes all products with the category FOOD
          */
+
+        shop.removeProductByCategory(Category.FOOD);
     }
+
 
 
 }

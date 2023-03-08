@@ -1,7 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
-
+import com.itacademy.eshop.product.types.LocatedAt;
 import java.util.ArrayList;
 
 public class Product {
@@ -10,13 +10,20 @@ public class Product {
     private Category category;
     private ArrayList<Review> reviews;
 
-    public Product(String name, double price, Category category) {
+    private ArrayList<RecentBuyers> recentBuyers;
+    private LocatedAt country;
+
+    public Product(String name, double price, Category category, LocatedAt country) {
         this.name = name;
         this.price = price;
         this.category = category;
+        this.country = country;
         this.reviews = new ArrayList<>();
+        this.recentBuyers = new ArrayList<>();
     }
-
+    public LocatedAt getCountry() {
+        return country;
+    }
     public String getName() {
         return name;
     }
@@ -31,6 +38,9 @@ public class Product {
 
     public ArrayList<Review> getReviews() {
         return reviews;
+    }
+    public ArrayList<RecentBuyers> getRecentBuyers() {
+        return recentBuyers;
     }
 
     public void addReview(Review review) {

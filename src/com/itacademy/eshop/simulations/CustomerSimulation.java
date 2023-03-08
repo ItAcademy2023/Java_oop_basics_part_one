@@ -1,5 +1,9 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Author;
+import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Review;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
 
@@ -29,21 +33,27 @@ public class CustomerSimulation {
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
-        throw new UnsupportedOperationException("addProductsToShoppingCart() is not implemented yet");
+        shoppingCart.AddItem(shop.findProductByName("Shirt"));
+        shoppingCart.AddItem(shop.findProductByName("Harry Potter"));
+        shoppingCart.AddItem(shop.findProductByName("Laptop"));
+        shoppingCart.AddItem(shop.findProductByName("Bike"));
+
     }
 
     private void removeProductsFromShoppingCart() {
         /**
          * User removes shirt from the shopping cart.
          */
-        throw new UnsupportedOperationException("removeProductsFromShoppingCart() is not implemented yet");
+        shoppingCart.RemoveItem(shop.findProductByName("Shirt"));
     }
 
 private void leaveReviewsAndRatingsForProducts() {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
-        throw new UnsupportedOperationException("leaveReviewsAndRatingsForProducts() is not implemented yet");
+    shop.findProductByName("Shirt").addReview(new Review(new Author("John", 23, "Sweden"), 1, "Shirt was oversized"));
+    shop.findProductByName("Laptop").addReview(new Review(new Author("John", 23, "Sweden"), 5, "Laptop runs very well :)"));
+    shop.findProductByName("Bike").addReview(new Review(new Author("John", 23, "Sweden"), 4, "Bike was great, price might be too high"));
     }
 
 

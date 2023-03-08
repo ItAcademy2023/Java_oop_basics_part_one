@@ -20,10 +20,22 @@ public class ShoppingCart {
         System.out.println("Total price: " + getTotalPrice());
     }
 
-    public String getTotalPrice() {
+    public double getTotalPrice() {
         /**
-         * Cakculates total price of shopping cart
+         * Calculates total price of shopping cart
          */
-        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+        int index;
+        int sum = 0;
+        for (index = 0; index < products.size(); index++)
+        {
+            sum += products.get(index).getPrice();
+        }
+        return sum;
+    }
+    public void AddItem(Product itemToAdd){
+        products.add(itemToAdd);
+    }
+    public void RemoveItem(Product itemToRemove){
+        products.remove(itemToRemove);
     }
 }

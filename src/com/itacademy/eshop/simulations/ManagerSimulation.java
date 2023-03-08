@@ -27,13 +27,21 @@ public class ManagerSimulation {
         /**
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          */
-        Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
+        shop.addProduct(new Product("Laptop", 1000, Category.ELECTRONICS));
+        Product book = new Product("Career book", 10, Category.BOOKS);
+        Product shirt = new Product("Shirt", 1, Category.CLOTHING);
+
+
     }
 
     private void findAndRemoveOneProduct() {
         /**
          * manager searcher for a product with the name "Laptop" (the one added a moment before) and removes it from the shop
          */
+        shop.printProducts();
+        shop.removeProductByName("Laptop");
+        System.out.println("*****************************************************");
+        shop.printProducts();
     }
 
     private void changePriceForOneProduct() {

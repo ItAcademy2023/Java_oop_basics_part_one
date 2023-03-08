@@ -11,6 +11,7 @@ public class Runner {
         Eshop shop = shopService.createShop();
         ManagerSimulation managerSimulation = new ManagerSimulation(shop);
         managerSimulation.simulate();
+
         /**
          * After the simulation, the shop should contain at least on product per category except FOOD.
          * Should contain products with the following names: "Shirt", "Book".

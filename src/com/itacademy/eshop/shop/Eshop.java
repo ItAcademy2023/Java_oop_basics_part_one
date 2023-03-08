@@ -45,13 +45,11 @@ public class Eshop {
         }
     }
 
-
     public void changePriceForProduct(String productName, double price) {
-        for (Product product : products) {
-            if (product.getName().equals(productName)) {
-                product.setPrice(price);
-                break;
-            }
+        try {
+            findProductByName(productName).setPrice(price);
+        } catch (Exception ex) {
+            System.out.println("Product not found");
         }
     }
 
@@ -65,9 +63,9 @@ public class Eshop {
         }
     }
 
-    public Product findProductByName(String shirt) {
+    public Product findProductByName(String name) {
         for (Product product : products) {
-            if (product.getName().equals(shirt)) {
+            if (product.getName().equals(name)) {
                 return product;
             }
         }

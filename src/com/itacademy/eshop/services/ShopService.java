@@ -31,6 +31,8 @@ public class ShopService {
         arrayList.add(new Product("Phone", 800, Category.ELECTRONICS));
         arrayList.add(new Product("Apple", 3.2, Category.FOOD));
         arrayList.add(new Product("TV", 550, Category.ELECTRONICS));
+        arrayList.add(new Product("SomeBook", 15, Category.BOOKS));
+
         return arrayList;
 
     }

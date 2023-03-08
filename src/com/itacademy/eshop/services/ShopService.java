@@ -12,6 +12,7 @@ public class ShopService {
     /*** This class is used for creating new e-shop object and initializing it with some products.
      */
 
+
     public Eshop createShop() {
         /** Should create new e-shop object and initialize it with some products.
          * Should return e-shop object.

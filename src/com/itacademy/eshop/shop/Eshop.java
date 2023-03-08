@@ -2,6 +2,7 @@ package com.itacademy.eshop.shop;
 
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.Review;
+import com.itacademy.eshop.product.types.AmountInStock;
 import com.itacademy.eshop.product.types.Category;
 
 import java.util.ArrayList;
@@ -28,6 +29,8 @@ public class Eshop {
             }
             System.out.println("Average rating: " + product.getAverageRating());
             System.out.println("-----------------------------");
+            System.out.println("Origin country:" + product.getOriginCountry());
+            System.out.println("AmountInStock" + product.getAmountInStock());
         }
     }
 

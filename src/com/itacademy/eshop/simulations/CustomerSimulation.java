@@ -2,6 +2,7 @@ package com.itacademy.eshop.simulations;
 
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.Review;
+import com.itacademy.eshop.product.types.Author;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
@@ -66,9 +67,11 @@ public class CustomerSimulation {
 
         List<Product> productList = shoppingCart.getProducts();
 
-        Review review1 = new Review("Evaldas", 5, "Amazing");
-        Review review2 = new Review("Valdas", 2, "Bad");
-        Review review3 = new Review("Valda", 5, "Amazing");
+        Author evaldas = new Author("Evaldas", "evaldas@gmail.com" );
+
+        Review review1 = new Review(evaldas, 5, "Amazing");
+        Review review2 = new Review(evaldas, 2, "Bad");
+        Review review3 = new Review(evaldas, 5, "Amazing");
 
         productList.get(0).addReview(review1);
         productList.get(1).addReview(review2);

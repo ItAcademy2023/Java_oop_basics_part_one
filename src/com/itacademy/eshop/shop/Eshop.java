@@ -35,6 +35,10 @@ public class Eshop {
         products.add(shirt);
     }
 
+    public void addReviewToProduct(Product product, Review review){
+        product.addReview(review);
+    }
+
     public void removeProductByName(String laptop) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);

@@ -2,6 +2,8 @@ package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
 
+import com.itacademy.eshop.product.types.Days;
+import com.itacademy.eshop.product.types.Extra;
 import java.util.ArrayList;
 
 public class Product {
@@ -9,6 +11,17 @@ public class Product {
     private double price;
     private Category category;
     private ArrayList<Review> reviews;
+
+    private Extra extra =new Extra();
+    private void privatus(){
+        System.out.println("This is from private method");
+    }
+    public void atviras(){
+        System.out.println("This is from public method");
+        privatus();
+    }
+    private Days days;
+
 
     public Product(String name, double price, Category category) {
         this.name = name;

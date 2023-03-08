@@ -22,7 +22,7 @@ public class ShoppingCart {
 
     public String getTotalPrice() {
         /**
-         * Cakculates total price of shopping cart
+         * Calculates total price of shopping cart
          */
         throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
     }

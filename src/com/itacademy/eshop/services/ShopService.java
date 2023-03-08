@@ -5,7 +5,6 @@ import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ShopService {
     /*** This class is used for creating new e-shop object and initializing it with some products.
@@ -17,9 +16,7 @@ public class ShopService {
         String name = "Walmart";
         ArrayList<Product> products = createProducts();
 
-        Eshop eShop = new Eshop(name, products);
-        if(eShop.)
-        return eShop;
+        return new Eshop(name, products);
 
 //        throw new UnsupportedOperationException("createShop() is not implemented yet");
     }

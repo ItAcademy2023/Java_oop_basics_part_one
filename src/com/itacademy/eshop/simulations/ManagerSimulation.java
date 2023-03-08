@@ -28,6 +28,8 @@ public class ManagerSimulation {
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          */
         Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
+        Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
+        Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
     }
 
     private void findAndRemoveOneProduct() {

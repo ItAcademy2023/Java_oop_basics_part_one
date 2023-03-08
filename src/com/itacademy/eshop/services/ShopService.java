@@ -1,6 +1,7 @@
 package com.itacademy.eshop.services;
 
 import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 
 import java.util.ArrayList;
@@ -9,12 +10,16 @@ public class ShopService {
     /*** This class is used for creating new e-shop object and initializing it with some products.
      */
 
+
     public Eshop createShop() {
         /** Should create new e-shop object and initialize it with some products.
          * Should return e-shop object.
          */
-       ArrayList<Product> products = createProducts();
-        throw new UnsupportedOperationException("createShop() is not implemented yet");
+
+        ArrayList<Product> products = createProducts();
+        Eshop eshop = new Eshop("Fantazijos", products);
+        //throw new UnsupportedOperationException("createShop() is not implemented yet");
+        return eshop;
     }
 
     private ArrayList<Product> createProducts() {
@@ -23,7 +28,15 @@ public class ShopService {
          * one per each category in Category enum.
          * Product should not have any reviews.
          */
-        throw new UnsupportedOperationException("createProducts() is not implemented yet");
+        //throw new UnsupportedOperationException("createProducts() is not implemented yet");
+        ArrayList<Product> productList = new ArrayList<>();
+        productList.add(new Product("Crime and Punishment", 15, Category.BOOKS));
+        productList.add(new Product("TV", 1000, Category.ELECTRONICS));
+        productList.add(new Product("Supreme Hoodie", 1001, Category.CLOTHING));
+        productList.add(new Product("Big Mac", 5, Category.FOOD));
+        productList.add(new Product("Fidget Spinner", 8, Category.TOYS));
+        productList.add(new Product("Jeans", 12, Category.CLOTHING));
+        return productList;
     }
 
 }

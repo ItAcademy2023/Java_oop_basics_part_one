@@ -5,7 +5,15 @@ import com.itacademy.eshop.product.Product;
 import java.util.ArrayList;
 
 public class ShoppingCart {
-    ArrayList<Product> products;
+    private ArrayList<Product> products;
+
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(ArrayList<Product> products) {
+        this.products = products;
+    }
 
     public ShoppingCart() {
         this.products = new ArrayList<>();
@@ -22,7 +30,7 @@ public class ShoppingCart {
 
     public String getTotalPrice() {
         /**
-         * Cakculates total price of shopping cart
+         * Calculates total price of shopping cart
          */
         throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
     }

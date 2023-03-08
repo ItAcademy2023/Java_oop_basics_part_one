@@ -37,11 +37,11 @@ public class Product {
         reviews.add(review);
     }
 
-    public Integer getAverageRating() {
+    public Float getAverageRating() {
         if (reviews.isEmpty()) {
             return null;
         }
-        int rating = 0;
+        float rating = 0;
         for (Review review : reviews) {
             rating += review.getRating();
         }

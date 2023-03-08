@@ -2,6 +2,7 @@ package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Product {
@@ -9,12 +10,14 @@ public class Product {
     private double price;
     private Category category;
     private ArrayList<Review> reviews;
+    private Description description;
 
     public Product(String name, double price, Category category) {
         this.name = name;
         this.price = price;
         this.category = category;
         this.reviews = new ArrayList<>();
+        this.description = new Description();
     }
 
     public String getName() {
@@ -31,6 +34,17 @@ public class Product {
 
     public ArrayList<Review> getReviews() {
         return reviews;
+    }
+
+    public void setDescription(String productDescription) {
+        description.setProductDescription(productDescription);
+        description.setDescriptionAdditionTime();
+    }
+
+    public Description getDescription() {return description;}
+
+    public String appendDescription(Product product) {
+        return product.getDescription().getProductDescription() + " " + getDescription().getDescriptionAdditionTime();
     }
 
     public void addReview(Review review) {

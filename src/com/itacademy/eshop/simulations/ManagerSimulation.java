@@ -21,6 +21,7 @@ public class ManagerSimulation {
         findAndRemoveOneProduct();
         changePriceForOneProduct();
         removeAllProductsWithCategory(Category.FOOD);
+        addTwoDescriptions();
     }
 
     private void addThreeNewProducts() {
@@ -30,6 +31,11 @@ public class ManagerSimulation {
         shop.addProduct(new Product("The Little Prince", 20, Category.BOOKS));
         shop.addProduct(new Product("Laptop", 1000, Category.ELECTRONICS));
         shop.addProduct(new Product("Shirt", 25, Category.CLOTHING));
+    }
+
+    private void addTwoDescriptions() {
+        shop.findProductByName("Fidget Spinner").setDescription("A toy to battle anxiety");
+        shop.findProductByName("Crime and Punishment").setDescription("Good book");
     }
 
     private void findAndRemoveOneProduct() {

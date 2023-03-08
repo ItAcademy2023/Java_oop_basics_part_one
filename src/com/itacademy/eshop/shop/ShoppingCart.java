@@ -18,6 +18,7 @@ public class ShoppingCart {
             System.out.println("Product name: " + product.getName());
             System.out.println("Price: " + product.getPrice());
             System.out.println("Category: " + product.getCategory());
+            System.out.println("Description: " + product.appendDescription(product));
         }
         System.out.println("Total price: " + getTotalPrice());
     }

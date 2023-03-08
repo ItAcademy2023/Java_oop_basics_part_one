@@ -5,7 +5,7 @@ import com.itacademy.eshop.product.Product;
 import java.util.ArrayList;
 
 public class ShoppingCart {
-    ArrayList<Product> products;
+    public ArrayList<Product> products;
 
 
 

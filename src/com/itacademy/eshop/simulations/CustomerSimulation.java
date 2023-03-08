@@ -1,7 +1,11 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
+
+import java.util.ArrayList;
 
 /**
  * This class represents a simulation of a customer shopping on an Eshop.
@@ -25,25 +29,21 @@ public class CustomerSimulation {
     }
 
     private void addProductsToShoppingCart() {
-        /**
-         * User browses the shop and adds 4 products to the shopping cart.
-         * One of them should be a book and other should be a shirt.
-         */
-        throw new UnsupportedOperationException("addProductsToShoppingCart() is not implemented yet");
+        shoppingCart.products.add(shop.findProductByName("Shirt"));
+        shoppingCart.products.add(shop.findProductByName("Banana"));
+        shoppingCart.products.add(shop.findProductByName("Apple"));
+        shoppingCart.products.add(shop.findProductByName("Orange"));
+        shoppingCart.products.add(shop.findProductByName("Pig"));
     }
 
     private void removeProductsFromShoppingCart() {
-        /**
-         * User removes shirt from the shopping cart.
-         */
-        throw new UnsupportedOperationException("removeProductsFromShoppingCart() is not implemented yet");
+        shoppingCart.products.remove(shoppingCart.products.get(0));
     }
 
 private void leaveReviewsAndRatingsForProducts() {
-        /**
-         * User leaves 3 reviews and ratings for the products in the shopping cart.
-         */
-        throw new UnsupportedOperationException("leaveReviewsAndRatingsForProducts() is not implemented yet");
+        shoppingCart.products.get(0).addReview(new Review("Nikita", 5, "Lorem Ipsum"));
+        shoppingCart.products.get(1).addReview(new Review("Nikita", 5, "Lorem Ipsum"));
+        shoppingCart.products.get(2).addReview(new Review("Nikita", 5, "Lorem Ipsum"));
     }
 
 

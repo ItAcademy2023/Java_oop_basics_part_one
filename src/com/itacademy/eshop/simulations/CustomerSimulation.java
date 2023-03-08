@@ -36,16 +36,16 @@ public class CustomerSimulation {
          * One of them should be a book and other should be a shirt.
          */
 
-        Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
+        Product laptop = shop.findProductByName("Cooking Book");
         shoppingCart.addProduct(laptop);
 
-        Product fridge = new Product("Fridge", 1000, Category.ELECTRONICS);
+        Product fridge = shop.findProductByName("Apple Watch");
         shoppingCart.addProduct(fridge);
 
-        Product book = new Product("Book", 20, Category.BOOKS);
+        Product book = shop.findProductByName("Shirt");
         shoppingCart.addProduct(book);
 
-        Product shirt = new Product("Shirt", 25, Category.CLOTHING);
+        Product shirt = shop.findProductByName("Fridge");
         shoppingCart.addProduct(shirt);
 
     }

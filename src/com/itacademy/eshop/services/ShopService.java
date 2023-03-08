@@ -35,7 +35,7 @@ public class ShopService {
         Product product2 = new Product("Apple Watch", 100, ELECTRONICS);
         products.add(product2);
 
-        Product product3 = new Product("Hat", 9, CLOTHING);
+        Product product3 = new Product("Shirt", 9, CLOTHING);
         products.add(product3);
 
         Product product4 = new Product("Coffee beans", 19.99, FOOD);

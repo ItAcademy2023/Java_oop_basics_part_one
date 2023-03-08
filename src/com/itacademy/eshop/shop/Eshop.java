@@ -45,7 +45,6 @@ public class Eshop {
         }
     }
 
-
     public void changePriceForProduct(String productName, int price) {
         for (Product product : products) {
             if (product.getName().equals(productName)) {

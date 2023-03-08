@@ -1,6 +1,5 @@
 package com.itacademy.eshop.product;
 
-import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.product.types.ShippingType;
 
 public class ShippingOption {

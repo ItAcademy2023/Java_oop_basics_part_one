@@ -58,12 +58,12 @@ public class CustomerSimulation {
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
         ArrayList<Product> products = shoppingCart.getProducts();
-        int iterCount = Math.min(products.size(),3);
-        for (int i = 0; i < iterCount;i++) {
+        int iterCount = Math.min(products.size(), 3);
+        for (int i = 0; i < iterCount; i++) {
             Author author = new Author("unknown_user");
             Product product = products.get(i);
             int randomRating = ThreadLocalRandom.current().nextInt(1, 5 + 1);
-            Review review = new Review(author, randomRating, "Comment about the product "+product.getName());
+            Review review = new Review(author, randomRating, "Comment about the product " + product.getName());
             product.addReview(review);
         }
     }

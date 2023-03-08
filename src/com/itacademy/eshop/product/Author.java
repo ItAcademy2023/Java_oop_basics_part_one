@@ -1,7 +1,5 @@
 package com.itacademy.eshop.product;
 
-import java.util.ArrayList;
-
 public class Author {
     private String username;
 

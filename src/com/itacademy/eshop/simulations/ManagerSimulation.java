@@ -46,7 +46,7 @@ public class ManagerSimulation {
         /**
          * manager searches for a product with the name "Shirt" (the one added a moment before) and changes its price to 20
          */
-        shop.changePriceForProduct("Shirt",20);
+        shop.changePriceForProduct("Shirt", 20);
     }
 
     private void removeAllProductsWithCategory(Category category) {

@@ -1,6 +1,7 @@
 package com.itacademy.eshop.shop;
 
 import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Review;
 
 import java.util.ArrayList;
 
@@ -22,8 +23,29 @@ public class ShoppingCart {
 
     public String getTotalPrice() {
         /**
-         * Cakculates total price of shopping cart
+         * Calculates total price of shopping cart
          */
         throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+    }
+
+    public void addProductToCart(Product product) {
+        products.add(product);
+    }
+
+    public void removeProductFromCart(String name) {
+        for (Product product : products) {
+            if (product.getName().equals(name)) {
+                products.remove(product);
+                break;
+            }
+        }
+    }
+
+    public void writeReviewForProduct(String name, Review review) {
+        for (Product product : products) {
+            if (product.getName().equals(name)) {
+                product.addReview(review);
+            }
+        }
     }
 }

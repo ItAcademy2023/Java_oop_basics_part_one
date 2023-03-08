@@ -28,21 +28,34 @@ public class ManagerSimulation {
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          */
         Product laptop = new Product("Laptop", 1000, Category.ELECTRONICS);
+        Product book = new Product("Book", 56.8, Category.BOOKS);
+        Product shirt = new Product("Shirt", 28, Category.CLOTHING);
+
+        shop.addProduct(laptop);
+        shop.addProduct(book);
+        shop.addProduct(shirt);
     }
 
     private void findAndRemoveOneProduct() {
+        Product laptop = shop.findProductByName("Laptop");  // method returns Product, so we need to create it.
+        shop.removeProductByName("Laptop");         // method returns void, so no need to create Project object.
+
         /**
          * manager searcher for a product with the name "Laptop" (the one added a moment before) and removes it from the shop
          */
     }
 
     private void changePriceForOneProduct() {
+        shop.changePriceForProduct("Shirt", 20);
+
         /**
          * manager searches for a product with the name "Shirt" (the one added a moment before) and changes its price to 20
          */
     }
 
     private void removeAllProductsWithCategory(Category category) {
+        shop.removeProductByCategory(Category.FOOD);
+
         /**
          * manager removes all products with the category FOOD
          */

@@ -6,7 +6,6 @@ import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 /**
  * This class represents a simulation of a customer shopping on an Eshop.
@@ -62,20 +61,28 @@ private void leaveReviewsAndRatingsForProducts() {
 
     String[] customerProductNames = {"Book", "Vanilla CSS", "The C Programming language"};
     ArrayList<Product> products = new ArrayList<>();
-    String randomName = UUID.randomUUID().toString();
+    ArrayList <Review> reviews = new ArrayList<>();
+
+    reviews.add(new Review("John", 4, "Super likey"));
+    reviews.add(new Review("John", 1, "Not Super likey"));
+    reviews.add(new Review("John", 2, "Hmm thinking if Super likey"));
+    reviews.add(new Review("Peter", 3, "Bad"));
+    reviews.add(new Review("Peter", 4, "404"));
+    reviews.add(new Review("Peter", 1, "Dislike"));
+    reviews.add(new Review("Logan", 2, "Why is this undefined"));
+    reviews.add(new Review("Logan", 1, "[object Object]"));
+    reviews.add(new Review("Logan", 5, "Me no like eval()"));
+
     for (String name: customerProductNames){
             Product product = shoppingCart.findProductByName(name);
-            String randomText = UUID.randomUUID().toString();
-
-            for (int i = 0; i < 3; i++){
-                int rating = (int) Math.round(Math.random() * ( 5 - 1 ));
-                Review review = new Review(randomName, rating, randomText);
-                product.addReview(review);
+            int i = 0;
+            int checkAgainstNumber = 3;
+            while (i < checkAgainstNumber){
+                product.addReview(reviews.get(i));
+                i++;
             }
+            checkAgainstNumber += 3;
+        System.out.println(product.getReviews());
         }
-
-
     }
-
-
 }

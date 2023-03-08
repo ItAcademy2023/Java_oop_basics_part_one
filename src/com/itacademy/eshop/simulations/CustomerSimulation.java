@@ -1,5 +1,8 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.Review;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
 
@@ -28,22 +31,43 @@ public class CustomerSimulation {
         /**
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
+         * find items in eshop
+         * add to the cart
+         * create add method in Shoping Cart class
          */
-        throw new UnsupportedOperationException("addProductsToShoppingCart() is not implemented yet");
+
+
+        shoppingCart.addProductToCart(shop.findProductByName("Shirt"));
+        shoppingCart.addProductToCart(shop.findProductByName("Success book"));
+        shoppingCart.addProductToCart(shop.findProductByName("Buddy"));
+        shoppingCart.addProductToCart(shop.findProductByName("Teddy bear"));
+        System.out.println("****");
+        shoppingCart.printShoppingCart();
     }
 
     private void removeProductsFromShoppingCart() {
         /**
          * User removes shirt from the shopping cart.
          */
-        throw new UnsupportedOperationException("removeProductsFromShoppingCart() is not implemented yet");
+
+        shoppingCart.removeProductByName(("Shirt"));
+
     }
 
-private void leaveReviewsAndRatingsForProducts() {
+    private void leaveReviewsAndRatingsForProducts() {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
+         * find a product
+         * add 3 review
+         * took existing product
          */
-        throw new UnsupportedOperationException("leaveReviewsAndRatingsForProducts() is not implemented yet");
+        Product shirt = shoppingCart.findProductByName("Shirt");
+        shirt.addReview(new Review("Evelina", 10,"beautiful"));
+        shirt.addReview(new Review("Tomas", 10,"best shirt I ever bought"));
+        shirt.addReview(new Review("Darius", 10,"Comfortable"));
+
+
+
     }
 
 

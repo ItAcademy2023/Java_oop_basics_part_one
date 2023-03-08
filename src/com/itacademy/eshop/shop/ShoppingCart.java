@@ -26,4 +26,28 @@ public class ShoppingCart {
          */
         throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
     }
+    public void addProductToCart(Product product) {
+        products.add(product);
+    }
+
+    public void removeProductByName(String laptop) {
+        for (int i = 0; i < products.size(); i++) {
+            Product product = products.get(i);
+            if (product.getName().equals(laptop)) {
+                products.remove(product);
+                break;
+            }
+        }
+    }
+    public Product findProductByName(String shirt) {
+        for (Product product : products) {
+            if (product.getName().equals(shirt)) {
+                return product;
+            }
+        }
+        return null;
+    }
+
+
+
 }

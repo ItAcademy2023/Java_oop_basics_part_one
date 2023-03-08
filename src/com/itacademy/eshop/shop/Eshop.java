@@ -31,8 +31,8 @@ public class Eshop {
         }
     }
 
-    public void addProduct(Product shirt) {
-        products.add(shirt);
+    public void addProduct(Product product) {
+        products.add(product);
     }
 
     public void removeProductByName(String laptop) {
@@ -46,7 +46,7 @@ public class Eshop {
     }
 
 
-    public void changePriceForProduct(String productName, int price) {
+    public void changePriceForProduct(String productName, double price) {
         for (Product product : products) {
             if (product.getName().equals(productName)) {
                 product.setPrice(price);

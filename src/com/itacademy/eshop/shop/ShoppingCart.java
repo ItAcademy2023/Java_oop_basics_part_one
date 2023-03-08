@@ -19,11 +19,56 @@ public class ShoppingCart {
         }
         System.out.println("Total price: " + getTotalPrice());
     }
+    public void addProductsToCart(ArrayList<Product> cartProducts){
+        if(!cartProducts.isEmpty()){
+            products = cartProducts;
+        } else {
+            throw new UnsupportedOperationException("Shopping cart is empty");
+        }
+    }
+    public void removeProductByName(String name) {
+        for (int i = 0; i < products.size(); i++) {
+            Product product = products.get(i);
+            if (product.getName().equals(name)) {
+                products.remove(product);
+                break;
+            }
+        }
+    }
+    public ArrayList<Product> getShoppingCartProducts(){
+        if(!products.isEmpty()){
+            return products;
+        } else {
+            throw new UnsupportedOperationException("Shopping cart is empty");
+        }
+    }
 
+    public Product findProductByName(String shirt) {
+        if(products.isEmpty()){
+            throw new UnsupportedOperationException("Shopping cart is empty");
+        } else{
+            for (Product product : products) {
+                if (product.getName().equals(shirt)) {
+                    return product;
+                }
+            }
+            return null;
+        }
+
+    }
     public String getTotalPrice() {
         /**
-         * Cakculates total price of shopping cart
+         * Calculates total price of shopping cart
          */
-        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+        double sum = 0;
+        if(products.isEmpty()){
+            throw new UnsupportedOperationException("Shopping cart is empty");
+        } else{
+            for (Product product: products){
+                sum += product.getPrice();
+            }
+        }
+
+        return "The total price is: " + sum;
     }
 }

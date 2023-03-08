@@ -33,10 +33,25 @@ public class ShoppingCart {
         products.remove(shirt);
     }
 
-    public String getTotalPrice() {
+    public Product findProductByName(String shirt) {
+        for (Product product : products) {
+            if (product.getName().equals(shirt)) {
+                return product;
+            }
+        }
+        return null;
+    }
+
+    public Double getTotalPrice() {
         /**
          * Cakculates total price of shopping cart
          */
-        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+//        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+
+        double totalPrice = 0;
+        for (Product product : products) {
+            totalPrice += product.getPrice();
+        }
+        return totalPrice;
     }
 }

@@ -57,24 +57,22 @@ public class CustomerSimulation {
          */
 //        throw new UnsupportedOperationException("leaveReviewsAndRatingsForProducts() is not implemented yet");
 
-//        ArrayList<Product> product = shoppingCart.getProducts();
-        ArrayList<Review> reviews = new ArrayList<>();
+        ArrayList<Product> product = shoppingCart.getProducts();
 
-        Product product1 = shop.findProductByName("shirt");
-        Product product2 = shop.findProductByName("lego");
-        Product product3 = shop.findProductByName("phone");
+        Product product1 = shoppingCart.findProductByName("shirt");
+        Product product2 = shoppingCart.findProductByName("lego");
+        Product product3 = shoppingCart.findProductByName("phone");
 
         Review review = new Review("tom", 4, "very comfortable shirt");
-        reviews.add(review);
         product1.addReview(review);
 
         Review review1 = new Review("anna", 2, "not impressed");
-        reviews.add(review1);
         product2.addReview(review1);
 
         Review review2 = new Review("emoji", 4, "i like it");
-        reviews.add(review2);
         product3.addReview(review2);
+
+
     }
 
 }

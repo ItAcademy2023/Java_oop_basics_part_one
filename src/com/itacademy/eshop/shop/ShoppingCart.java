@@ -11,6 +11,18 @@ public class ShoppingCart {
         this.products = new ArrayList<>();
     }
 
+    public void addToShopingCart(Product shirt) {
+        products.add(shirt);
+    }
+    public void removeFromShopingCart(String laptop) {
+        for (int i = 0; i < products.size(); i++) {
+            Product product = products.get(i);
+            if (product.getName().equals(laptop)) {
+                products.remove(product);
+                break;
+            }
+        }
+    }
     public void printShoppingCart() {
         for (Product product : products) {
             System.out.println("Product name: " + product.getName());

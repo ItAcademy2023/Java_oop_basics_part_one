@@ -73,4 +73,14 @@ public class Eshop {
         }
         return null;
     }
+    public void addReviewForProduct(String shirt,Review review) {
+        for (Product product : products) {
+            if (product.getName().equals(shirt)) {
+                 product.addReview(review);
+            }
+        }
+
+    }
+
+
 }

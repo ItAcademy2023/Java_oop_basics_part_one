@@ -1,7 +1,11 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
+
+import com.itacademy.eshop.product.Review;
 
 /**
  * This class represents a simulation of a customer shopping on an Eshop.
@@ -29,21 +33,28 @@ public class CustomerSimulation {
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
-        throw new UnsupportedOperationException("addProductsToShoppingCart() is not implemented yet");
+        shoppingCart.addToShopingCart(new Product("GoT",24.99, Category.BOOKS));
+        shoppingCart.addToShopingCart(new Product("shirt",19.99, Category.CLOTHING));
+        shoppingCart.addToShopingCart(new Product("tablet",259.99, Category.ELECTRONICS));
+        shoppingCart.addToShopingCart(new Product("wooden horse",99.99, Category.TOYS));
     }
 
     private void removeProductsFromShoppingCart() {
         /**
          * User removes shirt from the shopping cart.
          */
-        throw new UnsupportedOperationException("removeProductsFromShoppingCart() is not implemented yet");
+        shoppingCart.removeFromShopingCart("shirt");
     }
 
 private void leaveReviewsAndRatingsForProducts() {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
-        throw new UnsupportedOperationException("leaveReviewsAndRatingsForProducts() is not implemented yet");
+        shop.addReviewForProduct("tablet",new Review("dziugas",5,"too slow for price"));
+        shop.addReviewForProduct("wooden horse",new Review("dziugas",8,"good quality"));
+        shop.addReviewForProduct("GoT",new Review("dziugas",9,"very good book"));
+
+
     }
 
 

@@ -12,7 +12,7 @@ public class Product {
     private Category category;
     private ArrayList<Review> reviews;
 
-    private Extra extra =new Extra();
+    private Extra extra;
     private void privatus(){
         System.out.println("This is from private method");
     }

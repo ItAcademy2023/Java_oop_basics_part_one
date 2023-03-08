@@ -36,7 +36,7 @@ public class ShopService {
          * one per each category in Category enum.
          * Product should not have any reviews.
          */
-
+//
     }
 
 }

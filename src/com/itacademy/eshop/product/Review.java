@@ -22,4 +22,16 @@ public class Review {
     public String getComment() {
         return comment;
     }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

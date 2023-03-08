@@ -17,6 +17,10 @@ public class Product {
         this.reviews = new ArrayList<>();
     }
 
+    public void setReviews(ArrayList<Review> reviews) {
+        this.reviews = reviews;
+    }
+
     public String getName() {
         return name;
     }

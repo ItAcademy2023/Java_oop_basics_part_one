@@ -32,10 +32,12 @@ public class ShoppingCart {
         System.out.println("Total price: " + getTotalPrice());
     }
 
-    public String getTotalPrice() {
-        /**
-         * Cakculates total price of shopping cart
-         */
-        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+    public double getTotalPrice() {
+        double total=0.0;
+        for (int i = 0; i < products.size(); i++) {
+            total+=products.get(i).getPrice();
+
+        }
+        return total;
     }
 }

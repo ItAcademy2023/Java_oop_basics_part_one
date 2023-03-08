@@ -4,7 +4,7 @@ import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
-
+import com.itacademy.eshop.product.types.Author;
 import com.itacademy.eshop.product.Review;
 
 /**
@@ -50,9 +50,9 @@ private void leaveReviewsAndRatingsForProducts() {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
-        shop.addReviewForProduct("tablet",new Review("dziugas",5,"too slow for price"));
-        shop.addReviewForProduct("wooden horse",new Review("dziugas",8,"good quality"));
-        shop.addReviewForProduct("GoT",new Review("dziugas",9,"very good book"));
+        shop.addReviewForProduct("tablet",new Review(new Author("dziugas"),5,"too slow for price"));
+        shop.addReviewForProduct("wooden horse",new Review(new Author("dziugas"),8,"good quality"));
+        shop.addReviewForProduct("GoT",new Review(new Author("dziugas"),9,"very good book"));
 
 
     }

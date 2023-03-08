@@ -15,6 +15,10 @@ public class Eshop {
         this.products = products;
     }
 
+    public void setName(String _name) {
+        this.name = _name;
+    }
+
     public void printProducts() {
         for (Product product : products) {
             System.out.println("Product name: " + product.getName());

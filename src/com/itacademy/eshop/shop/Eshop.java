@@ -15,6 +15,10 @@ public class Eshop {
         this.products = products;
     }
 
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
     public void printProducts() {
         for (Product product : products) {
             System.out.println("Product name: " + product.getName());

@@ -1,5 +1,7 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Product;
+import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
 
@@ -29,14 +31,17 @@ public class CustomerSimulation {
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
-        throw new UnsupportedOperationException("addProductsToShoppingCart() is not implemented yet");
+       shoppingCart.addProductToCart(shop.findProductByName("Laptop"));
+       shoppingCart.addProductToCart(shop.findProductByName("Shovel"));
+        shoppingCart.addProductToCart(shop.findProductByName("Shirt"));
+
     }
 
     private void removeProductsFromShoppingCart() {
         /**
          * User removes shirt from the shopping cart.
          */
-        throw new UnsupportedOperationException("removeProductsFromShoppingCart() is not implemented yet");
+        shoppingCart.removeProductFromCart(shop.findProductByName("Shirt"));
     }
 
 private void leaveReviewsAndRatingsForProducts() {

@@ -1,6 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Manufacturer;
 
 import java.util.ArrayList;
 
@@ -9,6 +10,11 @@ public class Product {
     private double price;
     private Category category;
     private ArrayList<Review> reviews;
+
+    private Bonus bonus;
+    private Manufacturer Manufacturer1;
+
+
 
     public Product(String name, double price, Category category) {
         this.name = name;
@@ -50,5 +56,13 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    private boolean testMethod() {
+        return true;
+    }
+
+    public void callTestMethod() {
+        testMethod();
     }
 }

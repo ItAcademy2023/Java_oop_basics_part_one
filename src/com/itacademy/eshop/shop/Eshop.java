@@ -22,7 +22,7 @@ public class Eshop {
             System.out.println("Category: " + product.getCategory());
             System.out.println("Reviews:");
             for (Review review : product.getReviews()) {
-                System.out.println("Author: " + review.getAuthor());
+                System.out.println("Author: " + review.getAuthor().getName() + " " + review.getAuthor().getSurname());
                 System.out.println("Rating: " + review.getRating());
                 System.out.println("Comment: " + review.getComment());
             }
@@ -44,7 +44,6 @@ public class Eshop {
             }
         }
     }
-
 
     public void changePriceForProduct(String productName, int price) {
         for (Product product : products) {

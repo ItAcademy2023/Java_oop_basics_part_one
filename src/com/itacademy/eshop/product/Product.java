@@ -1,6 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Material;
 
 import java.util.ArrayList;
 
@@ -8,13 +9,16 @@ public class Product {
     private String name;
     private double price;
     private Category category;
+    private Material material;
     private ArrayList<Review> reviews;
+    private Information info;
 
     public Product(String name, double price, Category category) {
         this.name = name;
         this.price = price;
         this.category = category;
         this.reviews = new ArrayList<>();
+        this.info = new Information();
     }
 
     public String getName() {
@@ -35,6 +39,15 @@ public class Product {
 
     public void addReview(Review review) {
         reviews.add(review);
+        addInfo("wow", "2000-01-01");
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 
     public Integer getAverageRating() {
@@ -51,4 +64,10 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    private void addInfo(String manufacturer, String publishDate) {
+        info.setManufacturer(manufacturer);
+        info.setPublishDate(publishDate);
+    }
+
 }

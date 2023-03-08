@@ -24,6 +24,19 @@ public class ShoppingCart {
         /**
          * Cakculates total price of shopping cart
          */
-        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
+        double sum = 0;
+
+        for (Product product: this.products) {
+            sum += product.getPrice();
+        }
+        return String.valueOf(sum);
+    }
+
+    public void addProduct (Product product) {
+        this.products.add(product);
+    }
+
+    public void removeProduct (Product product) {
+        this.products.remove(product);
     }
 }

@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Author;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.product.types.Category;
@@ -59,9 +60,10 @@ public class CustomerSimulation {
         ArrayList<Product> products = shoppingCart.getProducts();
         int iterCount = Math.min(products.size(),3);
         for (int i = 0; i < iterCount;i++) {
+            Author author = new Author("unknown_user");
             Product product = products.get(i);
             int randomRating = ThreadLocalRandom.current().nextInt(1, 5 + 1);
-            Review review = new Review("Author's name", randomRating, "Comment about the product "+product.getName());
+            Review review = new Review(author, randomRating, "Comment about the product "+product.getName());
             product.addReview(review);
         }
     }

@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Author;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.product.types.Category;
@@ -54,9 +55,9 @@ public class CustomerSimulation {
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
         //throw new UnsupportedOperationException("leaveReviewsAndRatingsForProducts() is not implemented yet");
-        shoppingCart.findProductByName("Crime and Punishment").addReview(new Review("Fyodor Dostoevsky", 10, "Very good"));
-        shoppingCart.findProductByName("Fidget Spinner").addReview(new Review("Alibaba", 9, "Fun toy"));
-        shoppingCart.findProductByName("Jeans").addReview(new Review("Bershka", 7, "Very blue"));
+        shoppingCart.findProductByName("Crime and Punishment").addReview(new Review(new Author("Fyodor Dostoevsky"), 10, "Very good"));
+        shoppingCart.findProductByName("Fidget Spinner").addReview(new Review(new Author("Alibaba"), 9, "Fun toy"));
+        shoppingCart.findProductByName("Jeans").addReview(new Review(new Author("Bershka"), 7, "Very blue"));
     }
 
 

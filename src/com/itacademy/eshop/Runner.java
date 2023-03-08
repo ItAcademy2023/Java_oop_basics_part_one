@@ -19,10 +19,10 @@ public class Runner {
          * Should not contain products with the following names: "Laptop".
          * Price for the product "Shirt" should be 20.
          */
-        shop.printProducts();
 
         CustomerSimulation customerSimulation = new CustomerSimulation(shop);
         ShoppingCart shoppingCart = customerSimulation.simulateCustomerShopping();
+        shop.printProducts();
         /**
          * After the simulation, the shopping cart should contain 3 products. One of them should be a book.
          * Should have total price combined by all products in the cart

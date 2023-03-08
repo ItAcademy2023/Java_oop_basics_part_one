@@ -36,6 +36,7 @@ public class ShopService {
         productList.add(new Product("Big Mac", 5, Category.FOOD));
         productList.add(new Product("Fidget Spinner", 8, Category.TOYS));
         productList.add(new Product("Jeans", 12, Category.CLOTHING));
+        productList.add(new Product("Peppers", 1, Category.MISC));
         return productList;
     }
 

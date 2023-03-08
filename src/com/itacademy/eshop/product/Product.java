@@ -11,6 +11,7 @@ public class Product {
     private Category category;
     private ArrayList<Review> reviews;
     private Description description;
+    private Enum MISC;
 
     public Product(String name, double price, Category category) {
         this.name = name;
@@ -64,5 +65,13 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public Enum getMISC() {
+        return MISC;
+    }
+
+    public void setMISC(Enum MISC) {
+        this.MISC = MISC;
     }
 }

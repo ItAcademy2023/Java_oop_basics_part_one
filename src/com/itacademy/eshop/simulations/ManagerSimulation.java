@@ -39,20 +39,21 @@ public class ManagerSimulation {
         /**
          * manager searcher for a product with the name "Laptop" (the one added a moment before) and removes it from the shop
          */
-
-
+        shop.removeProductByName("Laptop");
     }
 
     private void changePriceForOneProduct() {
         /**
          * manager searches for a product with the name "Shirt" (the one added a moment before) and changes its price to 20
          */
+        shop.changePriceForProduct("Shirt", 20);
     }
 
     private void removeAllProductsWithCategory(Category category) {
         /**
          * manager removes all products with the category FOOD
          */
+        shop.removeProductByCategory(category);
     }
 
 

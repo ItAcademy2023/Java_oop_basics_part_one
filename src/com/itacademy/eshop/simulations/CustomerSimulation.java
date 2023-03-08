@@ -47,8 +47,8 @@ public class CustomerSimulation {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
-        shoppingCart.findProductByName("Bible").addReview(new Review("Me", 5, "Very interesting book."));
-        shoppingCart.findProductByName("Nail polish").addReview(new Review("Me", 3, "There could be more color options."));
-        shoppingCart.findProductByName("Toy car").addReview(new Review("Me", 1, "Toy broke the next day."));
+        shoppingCart.findProductByName("Bible").addReview(new Review("Paulius", "Macys", 5, "Very interesting book."));
+        shoppingCart.findProductByName("Nail polish").addReview(new Review("Paulius", "Macys", 3, "There could be more color options."));
+        shoppingCart.findProductByName("Toy car").addReview(new Review("Paulius", "Macys", 1, "Toy broke the next day."));
     }
 }

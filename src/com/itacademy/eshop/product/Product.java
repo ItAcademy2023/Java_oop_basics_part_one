@@ -1,6 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Stock;
 
 import java.util.ArrayList;
 
@@ -8,13 +9,18 @@ public class Product {
     private String name;
     private double price;
     private Category category;
+    private Stock stock;
+
     private ArrayList<Review> reviews;
 
-    public Product(String name, double price, Category category) {
+    public Product(String name, double price, Category category, Stock stock) {
         this.name = name;
         this.price = price;
         this.category = category;
+        this.stock = stock;
+
         this.reviews = new ArrayList<>();
+
     }
 
     public String getName() {

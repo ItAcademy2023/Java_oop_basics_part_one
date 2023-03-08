@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Author;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.shop.Eshop;
@@ -41,9 +42,9 @@ public class CustomerSimulation {
     }
 
 private void leaveReviewsAndRatingsForProducts() {
-        shoppingCart.products.get(0).addReview(new Review("Nikita", 5, "Lorem Ipsum"));
-        shoppingCart.products.get(1).addReview(new Review("Nikita", 5, "Lorem Ipsum"));
-        shoppingCart.products.get(2).addReview(new Review("Nikita", 5, "Lorem Ipsum"));
+        shoppingCart.products.get(0).addReview(new Review(new Author("Nikita"), 5, "Lorem Ipsum"));
+        shoppingCart.products.get(1).addReview(new Review(new Author("Nikita"), 5, "Lorem Ipsum"));
+        shoppingCart.products.get(2).addReview(new Review(new Author("Nikita"), 5, "Lorem Ipsum"));
     }
 
 

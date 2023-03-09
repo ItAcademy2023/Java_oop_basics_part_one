@@ -39,7 +39,6 @@ public class ManagerSimulation {
         /**
          * manager searcher for a product with the name "Laptop" (the one added a moment before) and removes it from the shop
          */
-        Product laptop = shop.findProductByName("Laptop");
         shop.removeProductByName("Laptop");
     }
 

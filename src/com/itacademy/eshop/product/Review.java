@@ -2,7 +2,7 @@ package com.itacademy.eshop.product;
 
 public class Review {
 
-    public class Author { // bonus task #4
+    private class Author { // bonus task #4
         public String authorName;
         public String authorSurname;
         public Author(String authorName, String authorSurname){
@@ -10,13 +10,23 @@ public class Review {
             this.authorSurname = authorSurname;
         }
     }
+    private Author authorObj;
     private String author;
     private int rating;
     private String comment;
 
-    public Review(String author, int rating, String comment) {
-        this.author = author;
+    public void setAuthor(String authorName, String authorSurname){
+        authorObj = new Author(authorName, authorSurname);
+    }
+
+    public Review(int rating, String comment) {
         this.rating = rating;
+        this.comment = comment;
+    }
+
+    public Review(String authorName, String authorSurname, int rating, String comment) {
+        this.rating = rating;
+        this.authorObj = new Author(authorName, authorSurname);
         this.comment = comment;
     }
 

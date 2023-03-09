@@ -26,9 +26,18 @@ public class CustomerSimulation {
         addProductsToShoppingCart("Laptop");
         addProductsToShoppingCart("banana phone");
         removeProductsFromShoppingCart("Shirt");
-        leaveReviewsAndRatingsForProducts("Shirt", new Review("Bob", 5, "Great"));
-        leaveReviewsAndRatingsForProducts("Book", new Review("Bob", 5, "Great"));
-        leaveReviewsAndRatingsForProducts("Laptop", new Review("Bob", 5, "Great"));
+        Review newReview1 = new Review(5, "nice I like");
+        Review newReview2 = new Review(5, "nice I like more");
+        Review newReview3 = new Review(5, "nice I like most");
+        newReview1.setAuthor("Bob", "Bobson");
+        newReview2.setAuthor("Jon", "Jonson");
+        newReview3.setAuthor("Dan", "Danson");
+        Review newReview4 = new Review("Name", "Surname", 5, "very cool");
+        leaveReviewsAndRatingsForProducts("Shirt", newReview1);
+        leaveReviewsAndRatingsForProducts("Book", newReview2);
+        leaveReviewsAndRatingsForProducts("Laptop", newReview3);
+        leaveReviewsAndRatingsForProducts("banana phone", newReview3);
+
         return shoppingCart;
     }
 

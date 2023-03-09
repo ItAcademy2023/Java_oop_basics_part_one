@@ -15,13 +15,25 @@ public class Product {
     private Extra extra;
     private Days days;
 
-    private void privatus() {
-        System.out.println("This is from private method");
-    }
-
     public void atviras() {
         System.out.println("This is from public method");
         privatus();
+    }
+
+    public void setDay(Days d) {
+        this.days = d;
+    }
+
+    public Days getDay() {
+        return days;
+    }
+
+    public void setExtra(String n, String l, Integer a) {
+        this.extra = new Extra(n, l, a);
+    }
+
+    public Extra getExtra() {
+        return extra;
     }
 
 
@@ -66,4 +78,10 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    private void privatus() {
+        System.out.println("This is from private method");
+    }
+
+
 }

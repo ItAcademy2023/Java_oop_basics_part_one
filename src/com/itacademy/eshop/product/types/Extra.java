@@ -5,7 +5,8 @@ public class Extra {
     private String lastName;
     private Integer age;
 
-    public void setName(String n, String l, Integer a) {
+
+    public Extra(String n, String l, Integer a) {
         this.name = n;
         this.lastName = l;
         this.age = a;

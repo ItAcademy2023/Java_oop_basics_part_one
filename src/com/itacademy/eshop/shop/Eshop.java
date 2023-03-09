@@ -35,6 +35,10 @@ public class Eshop {
         products.add(shirt);
     }
 
+    public void removeProduct(Product something){
+        products.remove(something);
+    }
+
     public void removeProductByName(String laptop) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);

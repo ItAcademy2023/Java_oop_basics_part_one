@@ -21,37 +21,37 @@ public class CustomerSimulation {
     }
 
     public ShoppingCart simulateCustomerShopping() {
-        addProductsToShoppingCart();
-        removeProductsFromShoppingCart();
-        leaveReviewsAndRatingsForProducts();
+        addProductsToShoppingCart("Shirt");
+        addProductsToShoppingCart("Book");
+        addProductsToShoppingCart("Laptop");
+        addProductsToShoppingCart("banana phone");
+        removeProductsFromShoppingCart("Shirt");
+        leaveReviewsAndRatingsForProducts("Shirt", new Review("Bob", 5, "Great"));
+        leaveReviewsAndRatingsForProducts("Book", new Review("Bob", 5, "Great"));
+        leaveReviewsAndRatingsForProducts("Laptop", new Review("Bob", 5, "Great"));
         return shoppingCart;
     }
 
-    private void addProductsToShoppingCart() {
+    private void addProductsToShoppingCart(String productName) {
         /**
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
-        shoppingCart.addProductToCart(shop.findProductByName("Shirt"));
-        shoppingCart.addProductToCart(shop.findProductByName("Book"));
-        shoppingCart.addProductToCart(shop.findProductByName("Laptop"));
-        shoppingCart.addProductToCart(shop.findProductByName("banana phone"));
+        shoppingCart.addProductToCart(shop.findProductByName(productName));
     }
 
-    private void removeProductsFromShoppingCart() {
+    private void removeProductsFromShoppingCart(String productName) {
         /**
          * User removes shirt from the shopping cart.
          */
-        shoppingCart.removeProductByName("Shirt");
+        shoppingCart.removeProductByName(productName);
     }
 
-private void leaveReviewsAndRatingsForProducts() {
+private void leaveReviewsAndRatingsForProducts(String productName, Review review) {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
-        shop.addReviewToProduct(shop.findProductByName("Shirt"), new Review("Bob", 5, "Great"));
-        shop.addReviewToProduct(shop.findProductByName("Book"), new Review("Dan", 5, "Wowzers"));
-        shop.addReviewToProduct(shop.findProductByName("Laptop"), new Review("Jon", 5, "Amazed"));
+        shop.addReviewToProduct(shop.findProductByName(productName), review);
     }
 
 

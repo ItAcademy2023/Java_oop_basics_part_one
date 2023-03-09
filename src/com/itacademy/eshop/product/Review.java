@@ -1,6 +1,15 @@
 package com.itacademy.eshop.product;
 
 public class Review {
+
+    public class Author { // bonus task #4
+        public String authorName;
+        public String authorSurname;
+        public Author(String authorName, String authorSurname){
+            this.authorName = authorName;
+            this.authorSurname = authorSurname;
+        }
+    }
     private String author;
     private int rating;
     private String comment;

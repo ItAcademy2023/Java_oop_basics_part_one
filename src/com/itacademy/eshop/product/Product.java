@@ -5,6 +5,16 @@ import com.itacademy.eshop.product.types.Category;
 import java.util.ArrayList;
 
 public class Product {
+
+    private class innerProductClass{ // bonus task #1
+
+    }
+
+    public enum newEnum{ // bonus task #3
+        ManufacturerNumber1,
+        ManufacturerNumber2
+    }
+
     private String name;
     private double price;
     private Category category;
@@ -50,5 +60,11 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+    private void privateMethod(){ // bonus task #2
+        System.out.println("Private method called!");
+    }
+    public void methodToCallPrivateMethod(){
+        privateMethod();
     }
 }

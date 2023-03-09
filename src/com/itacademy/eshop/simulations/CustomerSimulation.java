@@ -62,7 +62,7 @@ public class CustomerSimulation {
         for (int i = 0; i < iterCount; i++) {
             Author author = new Author("unknown_user");
             Product product = products.get(i);
-            int randomRating = ThreadLocalRandom.current().nextInt(1, 5 + 1);
+            int randomRating = ThreadLocalRandom.current().nextInt(1, 6);
             Review review = new Review(author, randomRating, "Comment about the product " + product.getName());
             product.addReview(review);
         }

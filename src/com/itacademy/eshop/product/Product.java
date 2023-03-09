@@ -58,31 +58,11 @@ public class Product {
         this.price = price;
     }
 
-    public ShippingOption getShippingOption() {
-        return shippingOption;
-    }
-
-    public void setShippingOption(ShippingOption shippingOption) {
-        this.shippingOption = shippingOption;
-    }
-
-    private double calculateTotalPrice() {
+    public double getTotalPrice() {
         double totalPrice = price;
         if (availability == Availability.IN_STOCK) {
             totalPrice += shippingOption.getPrice();
         }
         return totalPrice;
-    }
-
-    public double getTotalPrice() {
-        return calculateTotalPrice();
-    }
-
-    public Availability getAvailability() {
-        return availability;
-    }
-
-    public void setAvailability(Availability availability) {
-        this.availability = availability;
     }
 }

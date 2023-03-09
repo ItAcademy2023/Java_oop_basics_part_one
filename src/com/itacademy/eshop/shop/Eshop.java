@@ -49,7 +49,7 @@ public class Eshop {
         try {
             findProductByName(productName).setPrice(price);
         } catch (Exception ex) {
-            System.out.println("Product not found");
+            System.out.println("Something went wrong: " + ex);
         }
     }
 
@@ -69,6 +69,6 @@ public class Eshop {
                 return product;
             }
         }
-        return null;
+        throw new RuntimeException("Product not found");
     }
 }

@@ -4,52 +4,32 @@ import com.itacademy.eshop.product.types.ShippingType;
 
 public class ShippingOption {
 
-    private ShippingType type;
-    private double price;
+    private ShippingType shippingType;
+    private double shippingPrice;
     private int estimatedDeliveryDays;
 
-    public ShippingOption(ShippingType type) {
-        this.type = type;
-        this.price = calculatePrice(type);
-        this.estimatedDeliveryDays = calculateDeliveryDays(type);
-    }
-
-    public ShippingType getType() {
-        return type;
+    public ShippingOption(ShippingType shippingType) {
+        this.shippingType = shippingType;
     }
 
     public double getPrice() {
-        return price;
+        return shippingPrice;
     }
 
-    public int getEstimatedDeliveryDays() {
-        return estimatedDeliveryDays;
-    }
-
-    private double calculatePrice(ShippingType type) {
-        switch (type) {
-            case FREE:
-                return 0.0;
-            case STANDARD:
-                return 5.50;
-            case FAST:
-                return 10.90;
-            default:
-                throw new IllegalArgumentException("Invalid shipping type: " + type);
-        }
+    private double calculateShippingPrice(ShippingType type) {
+        return switch (type) {
+            case FREE -> 0.0;
+            case STANDARD -> 5.50;
+            case FAST -> 10.90;
+        };
     }
 
     private int calculateDeliveryDays(ShippingType type) {
-        switch (type) {
-            case FREE:
-                return 7;
-            case STANDARD:
-                return 3;
-            case FAST:
-                return 1;
-            default:
-                throw new IllegalArgumentException("Invalid shipping type: " + type);
-        }
+        return switch (type) {
+            case FREE -> 7;
+            case STANDARD -> 3;
+            case FAST -> 1;
+        };
     }
 }
 

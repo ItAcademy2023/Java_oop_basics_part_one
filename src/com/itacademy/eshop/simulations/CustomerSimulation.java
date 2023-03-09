@@ -53,7 +53,7 @@ public class CustomerSimulation {
         System.out.println("Please insert the price of the Toy");
         int newPriceToy = fourProductsShoppingScanner.nextInt();
 
-        ArrayList<Product>fourProductsShoppingScanner = new ArrayList<>();
+        ArrayList<Product>fourProductsShoppingScanne = new ArrayList<>();
         shop.addProduct(new Product(newNameBook, newPriceBook, Category.BOOKS));
         shop.addProduct(new Product(newNameShirt, newPriceShirt, Category.CLOTHING));
         shop.addProduct(new Product(newNameElectronics, newPriceElectronics, Category.ELECTRONICS));

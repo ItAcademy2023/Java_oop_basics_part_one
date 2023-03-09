@@ -35,16 +35,15 @@ public class CustomerSimulation {
          */
         ArrayList<Product> products = new ArrayList<>();
         String[] customerProductNames = {"Shirt", "Book", "The C Programming language", "Vanilla CSS"};
-
-
         for (String name: customerProductNames){
             products.add(shop.findProductByName(name));
         }
-
         if (products.isEmpty()){
             throw new UnsupportedOperationException("addProductsToShoppingCart() is not implemented yet");
         }
-        shoppingCart.addProductsToCart(products);
+        for (Product product: products){
+            shoppingCart.addProductToCart(product);
+        }
     }
 
     private void removeProductsFromShoppingCart() {
@@ -77,12 +76,13 @@ private void leaveReviewsAndRatingsForProducts() {
             Product product = shoppingCart.findProductByName(name);
             int i = 0;
             int checkAgainstNumber = 3;
+
             while (i < checkAgainstNumber){
                 product.addReview(reviews.get(i));
                 i++;
             }
+            i += 3;
             checkAgainstNumber += 3;
-        System.out.println(product.getReviews());
         }
     }
 }

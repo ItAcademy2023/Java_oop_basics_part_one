@@ -19,12 +19,8 @@ public class ShoppingCart {
         }
         System.out.println("Total price: " + getTotalPrice());
     }
-    public void addProductsToCart(ArrayList<Product> cartProducts){
-        if(!cartProducts.isEmpty()){
-            products = cartProducts;
-        } else {
-            throw new UnsupportedOperationException("Shopping cart is empty");
-        }
+    public void addProductToCart(Product product){
+        products.add(product);
     }
     public void removeProductByName(String name) {
         for (int i = 0; i < products.size(); i++) {

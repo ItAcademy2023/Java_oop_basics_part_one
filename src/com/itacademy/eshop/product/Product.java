@@ -1,6 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Country;
 
 import java.util.ArrayList;
 
@@ -8,6 +9,7 @@ public class Product {
     private String name;
     private double price;
     private Category category;
+    private Country country;
     private Discount discount;
     private ArrayList<Review> reviews;
 

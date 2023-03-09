@@ -35,7 +35,7 @@ public class Eshop {
         products.add(shirt);
     }
 
-    public void removeProductByName(String laptop) {
+    public Product removeProductByName(String laptop) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);
             if (product.getName().equals(laptop)) {
@@ -43,6 +43,7 @@ public class Eshop {
                 break;
             }
         }
+        return null;
     }
 
 
@@ -65,9 +66,9 @@ public class Eshop {
         }
     }
 
-    public Product findProductByName(String shirt) {
+    public Product findProductByName(String name) {
         for (Product product : products) {
-            if (product.getName().equals(shirt)) {
+            if (product.getName().equals(name)) {
                 return product;
             }
         }

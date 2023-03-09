@@ -6,9 +6,9 @@ public class Extra {
     private Integer age;
 
 
-    public Extra(String n, String l, Integer a) {
-        this.name = n;
-        this.lastName = l;
+    public Extra(String name, String lName, Integer a) {
+        this.name = name;
+        this.lastName = lName;
         this.age = a;
     }
 
@@ -24,12 +24,12 @@ public class Extra {
         return age;
     }
 
-    public void setName(String s) {
-        this.name = s;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setLastName(String s) {
-        this.lastName = s;
+    public void setLastName(String lName) {
+        this.lastName = lName;
     }
 
     public void setAge(Integer a) {

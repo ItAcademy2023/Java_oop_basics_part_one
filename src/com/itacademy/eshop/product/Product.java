@@ -28,8 +28,8 @@ public class Product {
         return days;
     }
 
-    public void setExtra(String n, String l, Integer a) {
-        this.extra = new Extra(n, l, a);
+    public void setExtra(String name, String lName, Integer a) {
+        this.extra = new Extra(name, lName, a);
     }
 
     public Extra getExtra() {

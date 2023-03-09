@@ -54,7 +54,13 @@ public class Eshop {
             }
         }
     }
-
+    public ArrayList<Product> getProducts(Boolean isManager){
+        if(isManager){
+            return  products;
+        }else{
+            throw new UnsupportedOperationException("Data unavailable for this user");
+        }
+    }
     public void removeProductByCategory(Category category) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);

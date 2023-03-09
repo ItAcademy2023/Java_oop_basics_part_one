@@ -2,6 +2,7 @@ package com.itacademy.eshop.simulations;
 
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Manufacturer;
 import com.itacademy.eshop.shop.Eshop;
 
 import java.util.ArrayList;
@@ -30,9 +31,9 @@ public class ManagerSimulation {
          * adds three new products to the shop. One of them should be a book, one should be a Laptop, and one should be a shirt.
          */
         ArrayList<Product> products = new ArrayList<Product>();
-        products.add(new Product("Laptop", 1000, Category.ELECTRONICS));
-        products.add(new Product("Shirt", 1000, Category.CLOTHING));
-        products.add(new Product("Book", 1000, Category.BOOKS));
+        products.add(new Product("Laptop", 1000, Category.ELECTRONICS, Manufacturer.ASUS));
+        products.add(new Product("Shirt", 1000, Category.CLOTHING, Manufacturer.MM6));
+        products.add(new Product("Book", 1000, Category.BOOKS, Manufacturer.BJARNESTOUSTROP));
         for (Product product: products){
             shop.addProduct(product);
         }
@@ -44,6 +45,9 @@ public class ManagerSimulation {
          * manager searcher for a product with the name "Laptop" (the one added a moment before) and removes it from the shop
          */
         shop.removeProductByName(name);
+    }
+    private ArrayList<Product> getProductData() {
+       return shop.getProducts(true);
     }
 
     private void changePriceForOneProduct(String name, double newPrice) {

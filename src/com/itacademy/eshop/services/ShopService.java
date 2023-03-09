@@ -2,6 +2,7 @@ package com.itacademy.eshop.services;
 
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Manufacturer;
 import com.itacademy.eshop.shop.Eshop;
 
 import java.util.ArrayList;
@@ -29,12 +30,12 @@ public class ShopService {
          */
             ArrayList<Product> products = new ArrayList<Product> ();
 
-            products.add(new Product("Vanilla CSS", 654.99, Category.DIY));
-            products.add(new Product("MacBook M1 13", 1254.99, Category.ELECTRONICS));
-            products.add(new Product("Lego toy car", 12.54, Category.TOYS));
-            products.add(new Product("The C Programming language", 999.99, Category.BOOKS));
-            products.add(new Product("Tabi Boot MM6", 700.12, Category.CLOTHING));
-            products.add(new Product("Mcd big mac", 3.49, Category.FOOD));
+            products.add(new Product("Vanilla CSS", 654.99, Category.DIY, Manufacturer.BJARNESTOUSTROP));
+            products.add(new Product("MacBook M1 13", 1254.99, Category.ELECTRONICS, Manufacturer.APPLE));
+            products.add(new Product("Lego toy car", 12.54, Category.TOYS, Manufacturer.LEGO));
+            products.add(new Product("The C Programming language", 999.99, Category.BOOKS, Manufacturer.BJARNESTOUSTROP));
+            products.add(new Product("Tabi Boot MM6", 700.12, Category.CLOTHING, Manufacturer.MM6));
+            products.add(new Product("Mcd big mac", 3.49, Category.FOOD, Manufacturer.MACDONALDS));
 
             if(products.isEmpty()){
                 throw new UnsupportedOperationException("createProducts() is not implemented yet");

@@ -6,7 +6,7 @@ public class Review {
     private String comment;
 
     public Review( Author author, int rating, String comment) {
-        this.author = new Author("","");
+        this.author = author;
         this.rating = rating;
         this.comment = comment;
     }

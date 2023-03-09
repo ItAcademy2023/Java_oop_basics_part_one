@@ -1,3 +1,5 @@
 .idea
+
 out
-java_oop_basics_part_1.iml
+
+*.iml

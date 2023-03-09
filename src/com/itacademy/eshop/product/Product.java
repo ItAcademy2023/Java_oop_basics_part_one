@@ -1,6 +1,8 @@
 package com.itacademy.eshop.product;
 
+import com.itacademy.eshop.product.types.Availability;
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.ShippingType;
 
 import java.util.ArrayList;
 
@@ -9,12 +11,16 @@ public class Product {
     private double price;
     private Category category;
     private ArrayList<Review> reviews;
+    private ShippingOption shippingOption;
+    private Availability availability;
+
 
     public Product(String name, double price, Category category) {
         this.name = name;
         this.price = price;
         this.category = category;
         this.reviews = new ArrayList<>();
+        this.shippingOption = new ShippingOption(ShippingType.FREE);
     }
 
     public String getName() {
@@ -48,7 +54,15 @@ public class Product {
         return rating / reviews.size();
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
+    }
+
+    public double getTotalPrice() {
+        double totalPrice = price;
+        if (availability == Availability.IN_STOCK) {
+            totalPrice += shippingOption.getPrice();
+        }
+        return totalPrice;
     }
 }

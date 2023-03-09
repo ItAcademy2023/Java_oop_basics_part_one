@@ -45,13 +45,11 @@ public class Eshop {
         }
     }
 
-
-    public void changePriceForProduct(String productName, int price) {
-        for (Product product : products) {
-            if (product.getName().equals(productName)) {
-                product.setPrice(price);
-                break;
-            }
+    public void changePriceForProduct(String productName, double price) {
+        try {
+            findProductByName(productName).setPrice(price);
+        } catch (Exception ex) {
+            System.out.println("Something went wrong: " + ex);
         }
     }
 
@@ -65,12 +63,12 @@ public class Eshop {
         }
     }
 
-    public Product findProductByName(String shirt) {
+    public Product findProductByName(String name) {
         for (Product product : products) {
-            if (product.getName().equals(shirt)) {
+            if (product.getName().equals(name)) {
                 return product;
             }
         }
-        return null;
+        throw new RuntimeException("Product not found");
     }
 }

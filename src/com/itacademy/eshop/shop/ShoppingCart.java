@@ -35,7 +35,7 @@ public class ShoppingCart {
     }
 
     public double getTotalPrice() {
-        double total = 0.0;
+        double total = 0;
         for (int i = 0; i < products.size(); i++) {
             total += products.get(i).getPrice();
 

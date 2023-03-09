@@ -5,10 +5,14 @@ import com.itacademy.eshop.product.types.Category;
 import java.util.ArrayList;
 
 public class Product {
+
     private String name;
     private double price;
     private Category category;
     private ArrayList<Review> reviews;
+
+    //new data type in Product class
+    private String Nationality;
 
     public Product(String name, double price, Category category) {
         this.name = name;
@@ -32,6 +36,7 @@ public class Product {
     public ArrayList<Review> getReviews() {
         return reviews;
     }
+
 
     public void addReview(Review review) {
         reviews.add(review);

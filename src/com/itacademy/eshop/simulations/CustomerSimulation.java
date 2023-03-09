@@ -33,26 +33,26 @@ public class CustomerSimulation {
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
-        shoppingCart.addToShopingCart(new Product("GoT", 24.99, Category.BOOKS));
-        shoppingCart.addToShopingCart(new Product("shirt", 19.99, Category.CLOTHING));
-        shoppingCart.addToShopingCart(new Product("tablet", 259.99, Category.ELECTRONICS));
-        shoppingCart.addToShopingCart(new Product("wooden horse", 99.99, Category.TOYS));
+        shoppingCart.addToShoppingCart(new Product("GoT", 24.99, Category.BOOKS));
+        shoppingCart.addToShoppingCart(new Product("shirt", 19.99, Category.CLOTHING));
+        shoppingCart.addToShoppingCart(new Product("tablet", 259.99, Category.ELECTRONICS));
+        shoppingCart.addToShoppingCart(new Product("wooden horse", 99.99, Category.TOYS));
     }
 
     private void removeProductsFromShoppingCart() {
         /**
          * User removes shirt from the shopping cart.
          */
-        shoppingCart.removeFromShopingCart("shirt");
+        shoppingCart.removeFromShoppingCart("shirt");
     }
 
     private void leaveReviewsAndRatingsForProducts() {
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.
          */
-        shop.addReviewForProduct("tablet", new Review(new Author("dziugas"), 5, "too slow for price"));
-        shop.addReviewForProduct("wooden horse", new Review(new Author("dziugas"), 8, "good quality"));
-        shop.addReviewForProduct("GoT", new Review(new Author("dziugas"), 9, "very good book"));
+        shop.addReviewForProduct("tablet", new Review(new Author("dziugas", 20), 5, "too slow for price"));
+        shop.addReviewForProduct("wooden horse", new Review(new Author("dziugas", 20), 8, "good quality"));
+        shop.addReviewForProduct("GoT", new Review(new Author("dziugas", 20), 9, "very good book"));
 
 
     }

@@ -17,8 +17,7 @@ public class ShopService {
          */
 
         ArrayList<Product> products = createProducts();
-        Eshop newEShop = new Eshop("MyShop",products);
-        return newEShop;
+        return new Eshop("MyShop", products);
     }
 
     private ArrayList<Product> createProducts() {
@@ -27,13 +26,13 @@ public class ShopService {
          * one per each category in Category enum.
          * Product should not have any reviews.
          */
-        ArrayList<Product> arrayList=new ArrayList<>();
-        arrayList.add(new Product("banana",15.99, Category.FOOD));
-        arrayList.add(new Product("apple",4.50, Category.FOOD));
-        arrayList.add(new Product("shirt",19.99, Category.CLOTHING));
-        arrayList.add(new Product("GoT",24.99, Category.BOOKS));
-        arrayList.add(new Product("tablet",259.99, Category.ELECTRONICS));
-        arrayList.add(new Product("wooden horse",99.99, Category.TOYS));
+        ArrayList<Product> arrayList = new ArrayList<>();
+        arrayList.add(new Product("banana", 15.99, Category.FOOD));
+        arrayList.add(new Product("apple", 4.50, Category.FOOD));
+        arrayList.add(new Product("shirt", 19.99, Category.CLOTHING));
+        arrayList.add(new Product("GoT", 24.99, Category.BOOKS));
+        arrayList.add(new Product("tablet", 259.99, Category.ELECTRONICS));
+        arrayList.add(new Product("wooden horse", 99.99, Category.TOYS));
 
         return arrayList;
 

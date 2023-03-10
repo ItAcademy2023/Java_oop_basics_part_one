@@ -15,9 +15,9 @@ public class Product {
     private Extra extra;
     private Days days;
 
-    public void atviras() {
+    public void getPrivateInfo() {
         System.out.println("This is from public method");
-        privatus();
+        privateInfoMethod();
     }
 
     public void setDay(Days d) {
@@ -79,8 +79,9 @@ public class Product {
         this.price = price;
     }
 
-    private void privatus() {
+    private void privateInfoMethod() {
         System.out.println("This is from private method");
+        System.out.println(name + " " + price + " " + category + " " + extra + " " + days);
     }
 
 

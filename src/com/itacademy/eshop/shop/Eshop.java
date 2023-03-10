@@ -73,4 +73,10 @@ public class Eshop {
         }
         return null;
     }
+
+    public void addReviewForProduct(String productName, Review review) {
+        findProductByName(productName).addReview(review);
+    }
+
+
 }

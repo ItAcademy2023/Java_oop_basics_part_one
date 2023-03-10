@@ -2,6 +2,9 @@ package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
 
+import com.itacademy.eshop.product.types.Days;
+import com.itacademy.eshop.product.types.Extra;
+
 import java.util.ArrayList;
 
 public class Product {
@@ -9,6 +12,30 @@ public class Product {
     private double price;
     private Category category;
     private ArrayList<Review> reviews;
+    private Extra extra;
+    private Days days;
+
+    public void getPrivateInfo() {
+        System.out.println("This is from public method");
+        privateInfoMethod();
+    }
+
+    public void setDay(Days days) {
+        this.days = days;
+    }
+
+    public Days getDays() {
+        return days;
+    }
+
+    public void setExtra(Extra extra) {
+        this.extra = extra;
+    }
+
+    public Extra getExtra() {
+        return extra;
+    }
+
 
     public Product(String name, double price, Category category) {
         this.name = name;
@@ -51,4 +78,11 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    private void privateInfoMethod() {
+        System.out.println("This is from private method");
+        System.out.println(name + " " + price + " " + category + " " + extra + " " + days);
+    }
+
+
 }

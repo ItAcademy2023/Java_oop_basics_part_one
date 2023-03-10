@@ -20,6 +20,7 @@ public class Eshop {
             System.out.println("Product name: " + product.getName());
             System.out.println("Price: " + product.getPrice());
             System.out.println("Category: " + product.getCategory());
+            System.out.println("State: " + product.getState());
             System.out.println("Reviews:");
             for (Review review : product.getReviews()) {
                 System.out.println("Author: " + review.getAuthor());
@@ -27,6 +28,7 @@ public class Eshop {
                 System.out.println("Comment: " + review.getComment());
             }
             System.out.println("Average rating: " + product.getAverageRating());
+            System.out.println("Average discount: " + product.averageDiscount());
             System.out.println("-----------------------------");
         }
     }

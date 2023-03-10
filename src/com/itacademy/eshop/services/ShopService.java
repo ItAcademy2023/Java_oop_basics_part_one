@@ -1,7 +1,9 @@
 package com.itacademy.eshop.services;
 
+import com.itacademy.eshop.product.Discount;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.State;
 import com.itacademy.eshop.shop.Eshop;
 
 import java.util.ArrayList;
@@ -24,12 +26,12 @@ public class ShopService {
 
         ArrayList<Product> arrayList = new ArrayList<>();
 
-               arrayList.add(new Product("Butter", 5.5, Category.FOOD));
-               arrayList.add(new Product("Dress", 15, Category.CLOTHING));
-               arrayList.add(new Product("Computer", 1500, Category.ELECTRONICS));
-               arrayList.add(new Product("Doll-house", 25.6, Category.TOYS));
-               arrayList.add(new Product("HarryPotter", 14.89, Category.BOOKS));
-               arrayList.add(new Product("Milk", 4.2, Category.FOOD));
+               arrayList.add(new Product("Butter", 5.5, Category.FOOD, State.NO_DEFECTS));
+               arrayList.add(new Product("Dress", 15, Category.CLOTHING, State.WITH_DEFECTS));
+               arrayList.add(new Product("Computer", 1500, Category.ELECTRONICS, State.NO_DEFECTS));
+               arrayList.add(new Product("Doll-house", 25.6, Category.TOYS, State.WITH_DEFECTS));
+               arrayList.add(new Product("HarryPotter", 14.89, Category.BOOKS, State.NO_DEFECTS));
+               arrayList.add(new Product("Milk", 4.2, Category.FOOD, State.UNUSABLE));
 
                return arrayList;
         /**

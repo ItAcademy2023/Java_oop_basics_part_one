@@ -19,12 +19,12 @@ public class Runner {
          */
         shop.printProducts();
 
-//        CustomerSimulation customerSimulation = new CustomerSimulation(shop);
-//        ShoppingCart shoppingCart = customerSimulation.simulateCustomerShopping();
+        //    CustomerSimulation customerSimulation = new CustomerSimulation(shop);
+        //    ShoppingCart shoppingCart = customerSimulation.simulateCustomerShopping();
         /**
          * After the simulation, the shopping cart should contain 3 products. One of them should be a book.
          * Should have total price combined by all products in the cart
          */
-//        shoppingCart.printShoppingCart();
+//      shoppingCart.printShoppingCart();
     }
 }

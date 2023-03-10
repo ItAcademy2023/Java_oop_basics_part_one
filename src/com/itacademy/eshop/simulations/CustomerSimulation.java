@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Author;
 import com.itacademy.eshop.product.Review;
 import com.itacademy.eshop.shop.Eshop;
 import com.itacademy.eshop.shop.ShoppingCart;
@@ -45,8 +46,8 @@ public class CustomerSimulation {
     }
 
     private void leaveReviewsAndRatingsForProducts() {
-        shoppingCart.writeReviewForProduct("Book", new Review("Ruta", 5, "Great!"));
-        shoppingCart.writeReviewForProduct("Laptop", new Review("Ruta", 4, "Quite good."));
+        shoppingCart.writeReviewForProduct("Book", new Review(new Author("Ruta", "Last", 33), 5, "Great!"));
+        shoppingCart.writeReviewForProduct("Laptop", new Review(new Author("Goda", "Bran", 25), 4, "Quite good."));
 
         /**
          * User leaves 3 reviews and ratings for the products in the shopping cart.

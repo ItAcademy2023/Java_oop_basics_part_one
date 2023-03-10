@@ -6,10 +6,10 @@ public class Extra {
     private Integer age;
 
 
-    public Extra(String name, String lName, Integer a) {
+    public Extra(String name, String lastName, Integer age) {
         this.name = name;
-        this.lastName = lName;
-        this.age = a;
+        this.lastName = lastName;
+        this.age = age;
     }
 
     public String getName() {

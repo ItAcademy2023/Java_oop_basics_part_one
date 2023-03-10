@@ -20,16 +20,16 @@ public class Product {
         privateInfoMethod();
     }
 
-    public void setDay(Days d) {
-        this.days = d;
+    public void setDay(Days days) {
+        this.days = days;
     }
 
-    public Days getDay() {
+    public Days getDays() {
         return days;
     }
 
-    public void setExtra(String name, String lName, Integer a) {
-        this.extra = new Extra(name, lName, a);
+    public void setExtra(Extra extra) {
+        this.extra = extra;
     }
 
     public Extra getExtra() {

@@ -2,27 +2,27 @@ package com.itacademy.eshop.product;
 
 public class Discount {
 
-    private double discountSize;
-    private String discountName;
+    private double size;
+    private String name;
 
-    public Discount(double discountSize, String discountName) {
-        this.discountSize = discountSize;
-        this.discountName = discountName;
+    public Discount(double size, String name) {
+        this.size = size;
+        this.name = name;
     }
 
-    public double getDiscountSize() {
-        return discountSize;
+    public double getSize() {
+        return size;
     }
 
-    public String getDiscountName() {
-        return discountName;
+    public String getName() {
+        return name;
     }
 
-    public void setDiscountSize(double discountSize) {
-        this.discountSize = discountSize;
+    public void setSize(double size) {
+        this.size = size;
     }
 
-    public void setDiscountName(String discountName) {
-        this.discountName = discountName;
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -75,7 +75,7 @@ public class Product {
         }
         double discountSize = 0;
         for (Discount d : discounts) {
-            discountSize += d.getDiscountSize();
+            discountSize += d.getSize();
         }
         return discountSize / discounts.size();
     }

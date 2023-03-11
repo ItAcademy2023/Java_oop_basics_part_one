@@ -39,8 +39,8 @@ public class ManagerSimulation {
     }
 
     private void findAndRemoveOneProduct() {
-                                                            // method returns Product, so we need to create it.
-        shop.removeProductByName("Laptop");         // method returns void, so no need to create Project object.
+
+        shop.removeProductByName("Laptop");
 
         /**
          * manager searcher for a product with the name "Laptop" (the one added a moment before) and removes it from the shop

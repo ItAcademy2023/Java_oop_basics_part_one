@@ -1,22 +1,22 @@
 package com.itacademy.eshop.product;
 
 public class Author {
-    private String authorName;
-    private String authorSurname;
+    private String name;
+    private String surname;
     private int age;
 
-    public Author(String authorName, String authorSurname, int age) {
-        this.authorName = authorName;
-        this.authorSurname = authorSurname;
+    public Author(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
         this.age = age;
     }
 
-    public String getAuthorName() {
-        return authorName;
+    public String getName() {
+        return name;
     }
 
-    public String getAuthorSurname() {
-        return authorSurname;
+    public String getSurname() {
+        return surname;
     }
 
     public int getAge() {

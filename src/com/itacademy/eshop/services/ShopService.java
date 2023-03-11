@@ -24,16 +24,16 @@ public class ShopService {
 
     private ArrayList<Product> createProducts() {
 
-        ArrayList<Product> arrayList = new ArrayList<>();
+        ArrayList<Product> products = new ArrayList<>();
 
-               arrayList.add(new Product("Butter", 5.5, Category.FOOD, State.NO_DEFECTS));
-               arrayList.add(new Product("Dress", 15, Category.CLOTHING, State.WITH_DEFECTS));
-               arrayList.add(new Product("Computer", 1500, Category.ELECTRONICS, State.NO_DEFECTS));
-               arrayList.add(new Product("Doll-house", 25.6, Category.TOYS, State.WITH_DEFECTS));
-               arrayList.add(new Product("HarryPotter", 14.89, Category.BOOKS, State.NO_DEFECTS));
-               arrayList.add(new Product("Milk", 4.2, Category.FOOD, State.UNUSABLE));
+               products.add(new Product("Butter", 5.5, Category.FOOD, State.NO_DEFECTS));
+               products.add(new Product("Dress", 15, Category.CLOTHING, State.WITH_DEFECTS));
+               products.add(new Product("Computer", 1500, Category.ELECTRONICS, State.NO_DEFECTS));
+               products.add(new Product("Doll-house", 25.6, Category.TOYS, State.WITH_DEFECTS));
+               products.add(new Product("HarryPotter", 14.89, Category.BOOKS, State.NO_DEFECTS));
+               products.add(new Product("Milk", 4.2, Category.FOOD, State.UNUSABLE));
 
-               return arrayList;
+               return products;
         /**
          * Should return a list of products. Should contain at least 6 products,
          * one per each category in Category enum.

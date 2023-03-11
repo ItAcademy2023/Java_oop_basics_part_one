@@ -65,9 +65,9 @@ public class Eshop {
         }
     }
 
-    public Product findProductByName(String shirt) {
+    public Product findProductByName(String name) {
         for (Product product : products) {
-            if (product.getName().equals(shirt)) {
+            if (product.getName().equals(name)) {
                 return product;
             }
         }

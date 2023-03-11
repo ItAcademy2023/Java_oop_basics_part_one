@@ -1,6 +1,7 @@
 package com.itacademy.eshop.product;
 
 import com.itacademy.eshop.product.types.Category;
+import com.itacademy.eshop.product.types.Country;
 
 import java.util.ArrayList;
 
@@ -8,12 +9,16 @@ public class Product {
     private String name;
     private double price;
     private Category category;
+    private Country country;
+    private Discount discount;
     private ArrayList<Review> reviews;
 
     public Product(String name, double price, Category category) {
         this.name = name;
         this.price = price;
         this.category = category;
+        this.discount= new Discount(0,"");
+        printDiscount();
         this.reviews = new ArrayList<>();
     }
 
@@ -27,6 +32,10 @@ public class Product {
 
     public Category getCategory() {
         return category;
+    }
+
+    private void printDiscount(){
+        System.out.println(discount);
     }
 
     public ArrayList<Review> getReviews() {

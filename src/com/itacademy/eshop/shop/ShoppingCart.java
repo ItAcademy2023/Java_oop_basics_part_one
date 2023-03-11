@@ -6,8 +6,8 @@ import com.itacademy.eshop.product.Review;
 import java.util.ArrayList;
 
 public class ShoppingCart {
-    ArrayList<Product> products;
-    Review review;
+    private ArrayList<Product> products;
+    private Review review;
 
     public ShoppingCart() {
         this.products = new ArrayList<>();
@@ -18,16 +18,15 @@ public class ShoppingCart {
             System.out.println("Product name: " + product.getName());
             System.out.println("Price: " + product.getPrice());
             System.out.println("Category: " + product.getCategory());
-            System.out.println("Description: " + product.appendDescription(product));
+            System.out.println("Description: " + product.getDescription().toString());
         }
         System.out.println("Total price: " + getTotalPrice());
     }
 
     public String getTotalPrice() {
         /**
-         * Cakculates total price of shopping cart
+         * Calculates total price of shopping cart
          */
-        //throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
         int totalPrice = 0;
         for (Product product: products) {
             totalPrice += product.getPrice();
@@ -39,19 +38,19 @@ public class ShoppingCart {
         products.add(product);
     }
 
-    public void removeProductByName(String laptop) {
+    public void removeProductByName(String productName) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);
-            if (product.getName().equals(laptop)) {
+            if (product.getName().equals(productName)) {
                 products.remove(product);
                 break;
             }
         }
     }
 
-    public Product findProductByName(String laptop) {
+    public Product findProductByName(String productName) {
         for (Product product : products) {
-            if (product.getName().equals(laptop)) {
+            if (product.getName().equals(productName)) {
                 return product;
             }
         }

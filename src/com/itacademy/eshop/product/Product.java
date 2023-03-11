@@ -11,7 +11,6 @@ public class Product {
     private Category category;
     private ArrayList<Review> reviews;
     private Description description;
-    private Enum MISC;
 
     public Product(String name, double price, Category category) {
         this.name = name;
@@ -37,16 +36,11 @@ public class Product {
         return reviews;
     }
 
-    public void setDescription(String productDescription) {
-        description.setProductDescription(productDescription);
-        description.setDescriptionAdditionTime();
+    public void setDescription(Description description) {
+        this.description = description;
     }
 
     public Description getDescription() {return description;}
-
-    public String appendDescription(Product product) {
-        return product.getDescription().getProductDescription() + " " + getDescription().getDescriptionAdditionTime();
-    }
 
     public void addReview(Review review) {
         reviews.add(review);
@@ -67,11 +61,4 @@ public class Product {
         this.price = price;
     }
 
-    public Enum getMISC() {
-        return MISC;
-    }
-
-    public void setMISC(Enum MISC) {
-        this.MISC = MISC;
-    }
 }

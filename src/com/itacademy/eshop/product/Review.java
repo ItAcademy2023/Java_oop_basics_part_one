@@ -12,7 +12,7 @@ public class Review {
     }
 
     public String getAuthor() {
-        return author.getAuthor();
+        return author.getName();
     }
 
     public int getRating() {
@@ -21,5 +21,17 @@ public class Review {
 
     public String getComment() {
         return comment;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

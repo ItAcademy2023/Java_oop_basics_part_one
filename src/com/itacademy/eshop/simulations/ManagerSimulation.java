@@ -1,5 +1,6 @@
 package com.itacademy.eshop.simulations;
 
+import com.itacademy.eshop.product.Description;
 import com.itacademy.eshop.product.Product;
 import com.itacademy.eshop.product.types.Category;
 import com.itacademy.eshop.shop.Eshop;
@@ -34,8 +35,8 @@ public class ManagerSimulation {
     }
 
     private void addTwoDescriptions() {
-        shop.findProductByName("Fidget Spinner").setDescription("A toy to battle anxiety");
-        shop.findProductByName("Crime and Punishment").setDescription("Good book");
+        shop.findProductByName("Fidget Spinner").setDescription(new Description("A toy to battle anxiety"));
+        shop.findProductByName("Crime and Punishment").setDescription(new Description("Good book"));
     }
 
     private void findAndRemoveOneProduct() {
@@ -56,7 +57,7 @@ public class ManagerSimulation {
         /**
          * manager removes all products with the category FOOD
          */
-        shop.removeProductByCategory(Category.FOOD);
+        shop.removeProductByCategory(category);
     }
 
 

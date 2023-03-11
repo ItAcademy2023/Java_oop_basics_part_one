@@ -16,10 +16,7 @@ public class ShopService {
          * Should return e-shop object.
          */
 
-        ArrayList<Product> products = createProducts();
-        Eshop eshop = new Eshop("Fantazijos", products);
-        //throw new UnsupportedOperationException("createShop() is not implemented yet");
-        return eshop;
+        return new Eshop("Fantazijos", createProducts());
     }
 
     private ArrayList<Product> createProducts() {
@@ -28,7 +25,6 @@ public class ShopService {
          * one per each category in Category enum.
          * Product should not have any reviews.
          */
-        //throw new UnsupportedOperationException("createProducts() is not implemented yet");
         ArrayList<Product> productList = new ArrayList<>();
         productList.add(new Product("Crime and Punishment", 15, Category.BOOKS));
         productList.add(new Product("TV", 1000, Category.ELECTRONICS));

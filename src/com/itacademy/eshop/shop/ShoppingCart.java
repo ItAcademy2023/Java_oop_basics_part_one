@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class ShoppingCart {
     ArrayList<Product> products;
+    private Product shirt;
 
     public ShoppingCart() {
         this.products = new ArrayList<>();
@@ -21,9 +22,18 @@ public class ShoppingCart {
     }
 
     public String getTotalPrice() {
+        double totalPrice = 0;
+        for (int i = 0; i < products.size(); i++) {
+            totalPrice += products.get(i).getPrice();
+        }
+        return "" + totalPrice;
+
         /**
-         * Cakculates total price of shopping cart
+         * Calculates total price of shopping cart
          */
-        throw new UnsupportedOperationException("getTotalPrice() is not implemented yet");
     }
+    public void addProduct(Product shirt) { products.add(shirt);}
+    public void removeProduct(Product shirt) { products.remove(shirt);}
+
+
 }

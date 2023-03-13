@@ -55,12 +55,11 @@ public class Eshop {
         }
     }
 
-    public void removeProductByCategory(Category category) {
+    public void removeProductsByCategory(Category category) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);
             if (product.getCategory().equals(category)) {
                 products.remove(i);
-                break;
             }
         }
     }

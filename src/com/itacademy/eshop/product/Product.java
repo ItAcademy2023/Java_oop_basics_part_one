@@ -37,6 +37,7 @@ public class Product {
         reviews.add(review);
     }
 
+
     public Integer getAverageRating() {
         if (reviews.isEmpty()) {
             return null;

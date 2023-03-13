@@ -5,6 +5,7 @@ public enum Category {
     ELECTRONICS,
     CLOTHING,
     FOOD,
-    TOYS
+    TOYS,
+    MISC
 
 }

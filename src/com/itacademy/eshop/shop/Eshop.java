@@ -35,10 +35,10 @@ public class Eshop {
         products.add(shirt);
     }
 
-    public Product removeProductByName(String laptop) {
+    public Product removeProductByName(String productName) {
         for (int i = 0; i < products.size(); i++) {
             Product product = products.get(i);
-            if (product.getName().equals(laptop)) {
+            if (product.getName().equals(productName)) {
                 products.remove(product);
                 break;
             }

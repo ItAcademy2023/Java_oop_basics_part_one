@@ -31,7 +31,6 @@ public class CustomerSimulation {
          * User browses the shop and adds 4 products to the shopping cart.
          * One of them should be a book and other should be a shirt.
          */
-//        Product foundProduct = shop.findProductByName("shirt"); just note to myself
 
         shoppingCart.addProductToCart(shop.findProductByName("shirt"));
         shoppingCart.addProductToCart(shop.findProductByName("Hello World"));

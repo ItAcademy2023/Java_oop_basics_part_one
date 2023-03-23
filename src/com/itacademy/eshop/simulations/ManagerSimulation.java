@@ -52,6 +52,6 @@ public class ManagerSimulation {
         /**
          * manager removes all products with the category FOOD
          */
-        shop.removeProductByCategory(Category.FOOD);
+        shop.removeProductByCategory(category);
     }
 }
